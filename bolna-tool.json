@@ -1,0 +1,32 @@
+{
+  "name": "send_payment_link",
+  "description": "Sends a Razorpay payment link to the customer's phone number via SMS. Use this when the customer agrees to pay and provides their phone number and the amount.",
+  "pre_call_message": "Please hold on while I send you the payment link.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "phone_number": {
+        "type": "string",
+        "description": "Customer phone number with country code, e.g. +919876543210"
+      },
+      "amount": {
+        "type": "string",
+        "description": "Payment amount in INR, e.g. 500"
+      }
+    },
+    "required": ["phone_number", "amount"]
+  },
+  "key": "custom_task",
+  "value": {
+    "method": "POST",
+    "param": {
+      "phone_number": "%(phone_number)s",
+      "amount": "%(amount)s"
+    },
+    "url": "https://cca3-2401-4900-ae5e-9039-693c-5d8-f8c-bbe5.ngrok-free.app/send-payment-link",
+    "api_token": "",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
