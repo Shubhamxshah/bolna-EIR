@@ -15,7 +15,7 @@
       },
       "orders": {
         "type": "string",
-        "description": "What the payment is for, e.g. 'insurance premium', 'consultation fee'"
+        "description": "Ordered items as a plain readable string, e.g. '2x Sunscreen, 3x Moisturizer'. Never use JSON or natural language."
       }
     },
     "required": ["phone_number", "amount", "orders"]
@@ -28,7 +28,7 @@
       "amount": "%(amount)s",
       "orders": "%(orders)s"
     },
-    "url": "https://e5e8-2401-4900-c029-19f1-ad14-1964-39d8-8872.ngrok-free.app/send-payment-link",
+    "url": "https://8be0-2401-4900-ae49-4b19-e5ba-35af-27ef-46e5.ngrok-free.app/send-payment-link",
     "api_token": "",
     "headers": {
       "Content-Type": "application/json"
